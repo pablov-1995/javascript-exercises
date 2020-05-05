@@ -1,6 +1,6 @@
 function GroupTotals(strArr) { 
   const matches = strArr.map(pair => pair.match(/(\w):(-?\d)/));
-  var matchesObj={};
+  let matchesObj={};
   for (match of matches) {
       if (matchesObj.hasOwnProperty(match[1])) matchesObj[match[1]] += parseInt(match[2])
       else matchesObj[match[1]] = parseInt(match[2])
